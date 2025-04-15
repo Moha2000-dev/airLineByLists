@@ -50,7 +50,15 @@
                 Console.Write("Enter your choice: ");
                 if (int.TryParse(Console.ReadLine(), out int choice)) return choice;
             }
+
+
+        }// Exit the system
+        public static void Exit()
+        {
+            Console.WriteLine("Thank you for using the Airline Reservation System. Goodbye!");
+            Environment.Exit(0);
         }
+
 
     }
 }
