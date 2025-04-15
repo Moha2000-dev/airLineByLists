@@ -16,7 +16,8 @@
 
         static void Main(string[] args)
         {
-           
+            try { StartSystem(); }
+            catch (Exception ex) { Console.WriteLine($"An error occurred: {ex.Message}"); }
         }
     }
 }
