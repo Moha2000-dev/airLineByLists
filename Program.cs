@@ -58,6 +58,15 @@
             Console.WriteLine("Thank you for using the Airline Reservation System. Goodbye!");
             Environment.Exit(0);
         }
+        public static void GetFlightDetails()
+        {
+            Console.Write("Enter flight code: "); string flightCode = Console.ReadLine();
+            Console.Write("Enter from city: "); string fromCity = Console.ReadLine();
+            Console.Write("Enter to city: "); string toCity = Console.ReadLine();
+            Console.Write("Enter duration (hours): "); int duration = int.Parse(Console.ReadLine());
+            Console.Write("Enter price: "); double price = double.Parse(Console.ReadLine());
+            AddFlight(flightCode, fromCity, toCity, duration, price);
+        }
 
 
     }
