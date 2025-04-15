@@ -19,5 +19,12 @@
             try { StartSystem(); }
             catch (Exception ex) { Console.WriteLine($"An error occurred: {ex.Message}"); }
         }
+        public static void DisplayWelcomeMessage()
+        {
+            Console.WriteLine("--------------------------------------------");
+            Console.WriteLine("|Welcome to the Airline Reservation System!|");
+            Console.WriteLine("--------------------------------------------");
+        }
+
     }
 }
