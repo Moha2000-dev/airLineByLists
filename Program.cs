@@ -67,6 +67,32 @@
             Console.Write("Enter price: "); double price = double.Parse(Console.ReadLine());
             AddFlight(flightCode, fromCity, toCity, duration, price);
         }
+        // Display all flights
+        public static void DisplayFlights()
+        {
+            if (flightCodeList.Count == 0)
+            {
+                Console.WriteLine("No flights available.");
+                return;
+            }
+
+            Console.WriteLine("\nAvailable Flights:");
+            for (int i = 0; i < flightCodeList.Count; i++)
+            {
+                Console.WriteLine($"{flightCodeList[i]} | From: {fromCityList[i]} | To: {toCityList[i]} | Departure: {departureTimeList[i]} | Duration: {durationList[i]} hrs");
+            }
+        }
+
+        // Get departure time from user
+        public static DateTime GetUserDateTime()
+        {
+            Console.Write("Enter year: "); int year = int.Parse(Console.ReadLine());
+            Console.Write("Enter month: "); int month = int.Parse(Console.ReadLine());
+            Console.Write("Enter day: "); int day = int.Parse(Console.ReadLine());
+            Console.Write("Enter time (hh:mm): "); var timeParts = Console.ReadLine().Split(':');
+            int hour = int.Parse(timeParts[0]), minute = int.Parse(timeParts[1]);
+            return new DateTime(year, month, day, hour, minute, 0);
+        }
 
 
     }
